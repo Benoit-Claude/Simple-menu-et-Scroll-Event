@@ -1,1 +1,12 @@
+nav{
+    position: absolute;
+}
 
+body>header>nav>ul {
+    transform : translateX(-100%);
+    transition : transform 0.5s ease-out;
+}
+
+body.show-menu>header>nav ul {
+    transform: none;
+}
