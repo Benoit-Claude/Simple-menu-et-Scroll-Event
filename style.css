@@ -1,6 +1,6 @@
-nav{
+/*nav{
     position: absolute;
-}
+}*/
 
 body>header>nav>ul {
     transform : translateX(-100%);
@@ -10,3 +10,9 @@ body>header>nav>ul {
 body.show-menu>header>nav ul {
     transform: none;
 }
+
+h4{
+    cursor: pointer;
+}
+
+

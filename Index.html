@@ -4,6 +4,12 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Simple menu</title>
+    <script>
+        if (!window.PointerEvent) {
+            document.head.appendChild(document.createElement('script'))
+                .src='https://code.jquery.com/pep/0.4.3/pep.js'
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -31,13 +37,13 @@
             "use strict";
 
             var titreH4 = document.querySelectorAll('body>header>nav>h4');
+            var corps = document.querySelectorAll('body');
 
             function classshowmenu() {
-                for (var i = 0; i < titreH4.length; i++){
-                    var unh4 = titreH4[i];
-                    unh4.classList.remove('show-menu');
-                }
-                this.classList.add('show-menu');
+                for (var i = 0; i < corps.length; i++){
+                    var uncorps = corps[i];
+                    uncorps.classList.toggle('show-menu');
+                     }
                 }
 
                 for (var i = 0; i < titreH4.length; i++) {
