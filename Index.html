@@ -26,7 +26,27 @@
     <p>Illud autem non dubitatur quod cum esset aliquando virtutum omnium domicilium Roma, ingenuos advenas plerique nobilium, ut Homerici bacarum suavitate Lotophagi, humanitatis multiformibus officiis retentabant.</p>
     <p>Quo cognito Constantius ultra mortalem modum exarsit ac nequo casu idem Gallus de futuris incertus agitare quaedam conducentia saluti suae per itinera conaretur, remoti sunt omnes de industria milites agentes in civitatibus perviis.</p>
 
-    <script></script>
+    <script>
+        (function (){
+            "use strict";
+
+            var titreH4 = document.querySelectorAll('body>header>nav>h4');
+
+            function classshowmenu() {
+                for (var i = 0; i < titreH4.length; i++){
+                    var unh4 = titreH4[i];
+                    unh4.classList.remove('show-menu');
+                }
+                this.classList.add('show-menu');
+                }
+
+                for (var i = 0; i < titreH4.length; i++) {
+                    var unh4 =  titreH4[i];
+                    unh4.addEventListener("click", classshowmenu)
+                }
+        }());
+
+    </script>
 
 </body>
 </html>
