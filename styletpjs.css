@@ -1,0 +1,59 @@
+body{
+    margin: 20px;
+    padding: 0;
+}
+
+
+
+.scroll-snap{
+    display: flex;
+    width: calc(100% - 400px);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+}
+
+.scroll-snap>*{
+    width: 100%;
+    flex: none;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+}
+#accordeon>details>summary>img{
+    width: 100px;
+}
+#accordeon>details>summary {
+    list-style-type: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+summary::-webkit-details-marker{
+    display: none;
+}
+#accordeon{
+    display: flex;
+}
+
+details{
+    width: 150px;
+    position: relative;
+}
+
+details[open]{
+    width: 300px;
+    transition: width 500ms ease-out;
+}
+
+#accordeon>details>div{
+    padding-left: 130px;
+    width: calc(300px - 130px)
+
+}
+
+li.active>a {
+    background-color: red;
+}
